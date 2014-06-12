@@ -1,0 +1,25 @@
+﻿<Page x:Class="SimplePOS.Printing.A4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1110" d:DesignWidth="790"
+	Title="A6">
+    <!-- d:DesignHeight="555" d:DesignWidth="395" -->
+
+    <Grid Name="test">
+        <Rectangle Height="51" Margin="218,488,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" Width="263" />
+        <ListBox Height="350" HorizontalAlignment="Left" Margin="216,113,0,0" Name="listBox1" VerticalAlignment="Top" Width="185" BorderBrush="#00000000" ItemsSource="{Binding}" BorderThickness="0,1,0,0" FlowDirection="LeftToRight" ScrollViewer.HorizontalScrollBarVisibility="Hidden"></ListBox>
+        <ListBox Height="350" Margin="407,113,0,0" Name="listBox2" VerticalAlignment="Top" BorderBrush="#00000000" FlowDirection="LeftToRight" BorderThickness="0,1,0,0" HorizontalAlignment="Left" Width="74"></ListBox>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="358,488,0,0" Name="textBlock1" Text="Summe:" VerticalAlignment="Top" />
+        <TextBlock FlowDirection="LeftToRight" Height="23" HorizontalAlignment="Left" Margin="407,516,0,0" Name="textBlock3" Text="0" VerticalAlignment="Top" Width="69" TextAlignment="Right" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="276,516,0,0" Name="textBlock4" Text="enthaltene MwSt (19%):" VerticalAlignment="Top" />
+        <Label Content="Shop 32+" Height="28" HorizontalAlignment="Left" Margin="216,81,0,0" Name="label1" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
+        <Label Content="Rechnung" Margin="295,81,0,0" Name="label2" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Width="76" Height="28" VerticalAlignment="Top" />
+        <Label Content="Nr.:" Height="28" Margin="393,81,0,0" Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="28" />
+        <TextBlock Height="23" Margin="518,20,0,0" Name="textBlock5" Text="tt.mm.yyyy" VerticalAlignment="Top" TextAlignment="Right" HorizontalAlignment="Left" Width="57" />
+        <TextBlock Height="23" Margin="426,86,0,0" Name="textBlock6" Text="100" VerticalAlignment="Top" TextAlignment="Right" HorizontalAlignment="Left" Width="55" />
+        <TextBlock FlowDirection="LeftToRight" Height="23" HorizontalAlignment="Left" Margin="407,488,0,0" Name="textBlock2" Text="0" VerticalAlignment="Top" Width="69" TextAlignment="Right" />
+    </Grid>
+</Page>

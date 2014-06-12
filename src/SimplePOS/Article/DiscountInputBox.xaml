@@ -1,0 +1,14 @@
+﻿<Window x:Class="SimplePOS.Article.DiscountInputBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DiscountImputBox" Height="212" Width="317" ResizeMode="NoResize" WindowStyle="ToolWindow" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBox Name="textBox1" Height="23" Margin="10,62,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" KeyDown="textBox1_KeyDown" KeyUp="textBox1_KeyUp"/>
+        <Label Name="line1" Content="Line1" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
+        <Label Name="line2" Content="Line2" HorizontalAlignment="Left" Margin="5,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,0.462"/>
+        <Button Content="OK" HorizontalAlignment="Right" Margin="0,122,10,10" Width="75" RenderTransformOrigin="0.507,0.6" Click="Button_Click"/>
+        <TextBox Name="textBox2" Height="23" Margin="62,94,10,0" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Foreground="#FFE81B1B"/>
+        <Label Content="Rabatt:" HorizontalAlignment="Left" Margin="5,90,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

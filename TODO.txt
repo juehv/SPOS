@@ -1,0 +1,55 @@
+-----------
+Allgemein
+-----------
+bessere Datenvalidierung
+artikelnummer prüfen (lager + bon) <-- ?
+internationalisieren (strings)
+Währung wählbar
+stringbuilder verwenden
+besser code kommentieren
+alles in actions capseln
++währung überall entfernen und auf dem bon gesondert drucken
+bessere fehlermeldungen (z.b. bei export angeben wenn datei nicht schreibbar)
+logging
++todos im code
+
+-----------
+Stock
+-----------
+Ansicht verbessern (sortieren)
+lager import/export aus csv
+	spalten ausweählbar?
+-----------
+Artikel
+-----------
+Ansicht verbessern (sortieren)
+
+-----------
+History
+-----------
+Auswahl des Zeitraums
+
+-----------
+Drucken
+-----------
+Bondrucker unterstützen
+Editierbarer Bon für normale Drucker
+
+-----------
+Inventurmodus
+-----------
+- artikel scannan
+- öfnet fenster mit name und anzahl des artikel
+- korrigierte anzahl kann eingegeben werden
+- speichern und beenden button
+
+-----------
+Datenbank
+-----------
++Später auf sqlite umstellen
+clean funktion (forcierter export zum jahresbeginn)
+
+-----------
+Rabatt
+-----------
+Prozentualer Rabatt

@@ -1,0 +1,66 @@
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe.manifest
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\bin\Debug\SimplePOS.application
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\bin\Debug\SimplePOS.pdb
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\bin\Debug\Db4objects.Db4o.dll
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Article\AddArticle.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Article\ArticleManager.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\MainWindow.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Printing\A4.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockArticle.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockList.baml
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Article\AddArticle.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Article\ArticleManager.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\MainWindow.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Printing\A4.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockArticle.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockList.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\App.g.cs
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS_MarkupCompile.cache
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.g.resources
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.Properties.Resources.resources
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.exe.manifest
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.application
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.exe
+C:\Slowdata\Users\JUehV\documents\visual studio 2010\Projects\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.pdb
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.exe
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.pdb
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe.manifest
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\SimplePOS.application
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\SimplePOS.pdb
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\Db4objects.Db4o.dll
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Article\ArticleManager.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\MainWindow.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Printing\A4.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockArticle.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockList.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Article\ArticleManager.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Printing\A4.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockArticle.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Stock\StockList.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\App.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS_MarkupCompile.cache
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.g.resources
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.Properties.Resources.resources
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.csproj.GenerateResource.Cache
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.exe.manifest
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.application
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Article\DiscountInputBox.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Article\DiscountInputBox.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\SimplePOS.exe.config
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Article\ArticleView.baml
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\Article\ArticleView.g.cs
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\obj\x86\Debug\SimplePOS.csprojResolveAssemblyReference.cache
+C:\Users\Jens\Dropbox\Software\Simple POS\SimplePOS\SimplePOS\bin\Debug\System.Data.SQLite.dll
+C:\Users\Jens\bazaar\trunk\SimplePOS\src\SimplePOS\bin\Debug\SimplePOS.exe.config
+C:\Users\Jens\bazaar\trunk\SimplePOS\src\SimplePOS\obj\x86\Debug\SimplePOS.exe
+C:\Users\Jens\bazaar\trunk\SimplePOS\src\SimplePOS\obj\x86\Debug\SimplePOS.pdb
