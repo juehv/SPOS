@@ -483,6 +483,17 @@ namespace SimplePOS.Database
                 key.Value = "CURRENCY";
                 value.Value = Preferences.PreferenceManager.CURRENCY_TECH;
                 command.ExecuteNonQuery();
+                // show tac
+                key.Value = "SHOW_TAX";
+                if (Preferences.PreferenceManager.SHOW_TAX)
+                {
+                    value.Value = "1";
+                }
+                else
+                {
+                    value.Value = "0";
+                }
+                command.ExecuteNonQuery();
                 // tax1
                 key.Value = "TAX1";
                 value.Value = string.Format("{0:0.00}", Preferences.PreferenceManager.TAX_1);
@@ -526,7 +537,7 @@ namespace SimplePOS.Database
                 reader.Close();
 
                 // Write to pref class
-                if (prefs.Count == 5)
+                if (prefs.Count == 7)
                 {
                     //valid pref set
                     // doubleprint
@@ -540,6 +551,15 @@ namespace SimplePOS.Database
                     }
                     // currency
                     Preferences.PreferenceManager.CURRENCY_TECH = prefs["CURRENCY"];
+                    // show tax
+                    if (prefs["SHOW_TAX"].Equals("1"))
+                    {
+                        Preferences.PreferenceManager.SHOW_TAX = true;
+                    }
+                    else
+                    {
+                        Preferences.PreferenceManager.SHOW_TAX = false;
+                    }
                     // tax1
                     Preferences.PreferenceManager.TAX_1 = double.Parse(prefs["TAX1"]);
                     // tax2

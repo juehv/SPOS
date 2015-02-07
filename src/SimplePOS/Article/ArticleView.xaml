@@ -15,8 +15,8 @@
         <TextBlock Height="23" Margin="0,71,12,0" Name="textBlock5" Text="EUR" VerticalAlignment="Top" HorizontalAlignment="Right" Width="21" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,100,0,0" Name="textBlock6" Text="Steuersatz" VerticalAlignment="Top" />
         <ComboBox Height="23" Margin="71,97,12,0" Name="comboBox1" VerticalAlignment="Top" FlowDirection="LeftToRight">
-            <ComboBoxItem Content="19 %" IsSelected="True" />
-            <ComboBoxItem Content="7 %" />
+            <ComboBoxItem Content="19 %" IsSelected="True" Name="tax1Item" />
+            <ComboBoxItem Content="7 %" Name="tax2Item"/>
         </ComboBox>
     </Grid>
 </Window>

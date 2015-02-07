@@ -1,0 +1,14 @@
+﻿<Window x:Class="SimplePOS.Preferences.TaxPreferences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TaxPreferences" Height="163" Width="300">
+    <Grid>
+        <CheckBox Content="Steuer ausweisen" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="True" Name="showTaxCheckbox" Click="showTaxCheckbox_Checked"/>
+        <TextBox Height="23" Margin="112,34,10,0" TextWrapping="Wrap" Text="19" VerticalAlignment="Top" Name="tax1Textbox"/>
+        <TextBox Height="23" Margin="112,62,10,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Name="tax2Textbox"/>
+        <Label Content="Steuersatz 1 (%):" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Steuersatz 2 (%):" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+        <Button Content="Speichern" HorizontalAlignment="Right" Margin="0,0,10,10" Width="75" Height="20" VerticalAlignment="Bottom" Click="Button_Click"/>
+
+    </Grid>
+</Window>

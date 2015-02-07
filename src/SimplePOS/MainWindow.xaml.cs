@@ -18,6 +18,7 @@ using System.Net;
 using SimplePOS.Article;
 using SimplePOS.Invoicing;
 using SimplePOS.Stock;
+using SimplePOS.Preferences;
 
 namespace SimplePOS
 {
@@ -104,7 +105,7 @@ namespace SimplePOS
                     "\nSpos wird daher beendet.\nWenden Sie sich an den Support!",
                     "Schwerer Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
                 Environment.Exit(-1);
-            }
+            } 
             InitializeComponent();
             clearForm();
         }
@@ -150,18 +151,24 @@ namespace SimplePOS
         // Lager - Einlagern
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            StockArticle window = new StockArticle(db);
-            window.Owner = this;
-            window.ShowDialog();
+            MessageBox.Show("Momentan nicht untertützt", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+
+            //StockArticle window = new StockArticle(db);
+            //window.Owner = this;
+            //window.ShowDialog();
 
         }
 
         // Lager - Verwalten
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-            StockList window = new StockList(db);
-            window.Owner = this;
-            window.ShowDialog();
+            MessageBox.Show("Momentan nicht untertützt", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            return;
+
+            //StockList window = new StockList(db);
+            //window.Owner = this;
+            //window.ShowDialog();
         }
 
         // Drucken Button
@@ -252,7 +259,7 @@ namespace SimplePOS
         // Hilfe - About
         private void MenuItem_Click_11(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Simple POS\n(c) JUehV-Tech\n\nVersion " + Preferences.PreferenceManager.VERSION +
+            MessageBox.Show("Simple POS\n(c) Jens Heuschkel\n\nVersion " + Preferences.PreferenceManager.VERSION +
                 "\nAchtung: Testversion!\nNicht für den Produktiveinsatz.", "", MessageBoxButton.OK, MessageBoxImage.None);
         }
 
@@ -268,22 +275,24 @@ namespace SimplePOS
                 bool mustUpdate = false;
                 try
                 {
-                    if (Convert.ToInt32(currVersion[0]) < Convert.ToInt32(version[0]))
+
+                    for (int i = 0; i < 4; i++)
                     {
-                        mustUpdate = true;
+                        if (Convert.ToInt32(currVersion[i]) > Convert.ToInt32(version[i]))
+                        {
+                            break;
+                        }
+                        if (Convert.ToInt32(currVersion[i]) < Convert.ToInt32(version[i]))
+                        {
+                            mustUpdate = true;
+                            break;
+                        }
+                        //if (Convert.ToInt32(currVersion[i]) == Convert.ToInt32(version[i]))
+                        //{
+                        //    continue;
+                        //}
                     }
-                    else if (Convert.ToInt32(currVersion[1]) < Convert.ToInt32(version[1]))
-                    {
-                        mustUpdate = true;
-                    }
-                    else if (Convert.ToInt32(currVersion[2]) < Convert.ToInt32(version[2]))
-                    {
-                        mustUpdate = true;
-                    }
-                    else if (Convert.ToInt32(currVersion[3]) < Convert.ToInt32(version[3]))
-                    {
-                        mustUpdate = true;
-                    }
+
                     if (mustUpdate)
                     {
                         MessageBoxResult result = MessageBox.Show("Neuere Version gefunden!\n" +
@@ -311,6 +320,14 @@ namespace SimplePOS
                 MessageBox.Show("Fehler beim lesen der Versionsnummer:\n" + versionString, "",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        // Extras - Steuer Einstellungen
+        private void MenuItem_Click_13(object sender, RoutedEventArgs e)
+        {
+            TaxPreferences window = new TaxPreferences(db);
+            window.Owner = this;
+            window.ShowDialog();
         }
     }
 }

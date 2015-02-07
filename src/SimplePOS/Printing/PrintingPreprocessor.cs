@@ -60,17 +60,17 @@ namespace SimplePOS.Printing
                     {
                         lines = 0;
                         //itemStacks.Add(aktStack);
-                        pages.Add(new SimplePOS.Invoicing.Invoice(invoice, pageCount++, aktStack));
+                        pages.Add(new SimplePOS.Invoicing.Invoice(invoice, pageCount++, aktStack, invoice.TaxSet1, invoice.TaxSet2,invoice.ShowTax));
                         aktStack = new List<SimplePOS.Invoicing.InvoiceItem>();
                         aktStack.Add(item);
                     }
                 }
                 if (aktStack.Count > 0)
                 {
-                    pages.Add(new SimplePOS.Invoicing.Invoice(invoice, pageCount++, aktStack));
+                    pages.Add(new SimplePOS.Invoicing.Invoice(invoice, pageCount++, aktStack, invoice.TaxSet1, invoice.TaxSet2, invoice.ShowTax));
                 }
 
-                
+
             }
             else pages.Add(invoice);
 

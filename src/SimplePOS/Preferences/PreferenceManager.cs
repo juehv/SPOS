@@ -34,8 +34,17 @@ namespace SimplePOS.Preferences
         /// <summary>
         /// predefined TAX
         /// </summary>
+        public static double STANDARD_TAX_1 = 19;
+        public static double STANDARD_TAX_2 = 7;
+        /// <summary>
+        /// user TAX
+        /// </summary>
         public static double TAX_1 = 19;
         public static double TAX_2 = 7;
+        /// <summary>
+        /// show TAX
+        /// </summary>
+        public static bool SHOW_TAX = true;
         /// <summary>
         /// Start value of invoice numbering
         /// </summary>

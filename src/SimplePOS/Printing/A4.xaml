@@ -13,10 +13,9 @@
         <ListBox Height="350" HorizontalAlignment="Left" Margin="216,113,0,0" Name="listBox1" VerticalAlignment="Top" Width="185" BorderBrush="#00000000" ItemsSource="{Binding}" BorderThickness="0,1,0,0" FlowDirection="LeftToRight" ScrollViewer.HorizontalScrollBarVisibility="Hidden"></ListBox>
         <ListBox Height="350" Margin="407,113,0,0" Name="listBox2" VerticalAlignment="Top" BorderBrush="#00000000" FlowDirection="LeftToRight" BorderThickness="0,1,0,0" HorizontalAlignment="Left" Width="74"></ListBox>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="358,488,0,0" Name="textBlock1" Text="Summe:" VerticalAlignment="Top" />
-        <TextBlock FlowDirection="LeftToRight" Height="23" HorizontalAlignment="Left" Margin="407,516,0,0" Name="textBlock3" Text="0" VerticalAlignment="Top" Width="69" TextAlignment="Right" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="276,516,0,0" Name="textBlock4" Text="enthaltene MwSt (19%):" VerticalAlignment="Top" />
-        <Label Content="Shop 32+" Height="28" HorizontalAlignment="Left" Margin="216,81,0,0" Name="label1" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" />
-        <Label Content="Rechnung" Margin="295,81,0,0" Name="label2" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Width="76" Height="28" VerticalAlignment="Top" />
+        <TextBlock FlowDirection="LeftToRight" Height="23" HorizontalAlignment="Left" Margin="218,516,0,0" Name="textBlock3" Text="0" VerticalAlignment="Top" Width="258" TextAlignment="Right" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="276,516,0,0" Name="tax_field" Text="enthaltene MwSt (19%):" VerticalAlignment="Top" />
+        <Label Content="Rechnung" Margin="215,81,0,0" Name="label2" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Width="76" Height="28" VerticalAlignment="Top" />
         <Label Content="Nr.:" Height="28" Margin="393,81,0,0" Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="28" />
         <TextBlock Height="23" Margin="518,20,0,0" Name="textBlock5" Text="tt.mm.yyyy" VerticalAlignment="Top" TextAlignment="Right" HorizontalAlignment="Left" Width="57" />
         <TextBlock Height="23" Margin="426,86,0,0" Name="textBlock6" Text="100" VerticalAlignment="Top" TextAlignment="Right" HorizontalAlignment="Left" Width="55" />

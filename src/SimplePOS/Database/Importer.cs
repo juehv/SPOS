@@ -83,8 +83,12 @@ namespace SimplePOS.Database
                 {
                     try
                     {
+                        // Text may be empty wich results in a strange object
+                        string text;
+                        try { text = (string)values[2]; }
+                        catch { text = ""; }
                         articleList.Add(new SimplePOS.Article.RegularArticle((string)values[0],
-                            (string)values[1], (string)values[2],
+                            (string)values[1], text,
                             Double.Parse((string)values[3]),
                             Double.Parse((string)values[4])));
                     }

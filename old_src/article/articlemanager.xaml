@@ -1,0 +1,18 @@
+<Window x:Class="SimplePOS.ArticleManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Artikel Verwalten" Height="300" Width="511" WindowStartupLocation="CenterOwner"
+        WindowStyle="ToolWindow" MinWidth="511" MinHeight="300">
+  <Grid>
+    <DataGrid Name="dataGrid1" Margin="12,12,93,12" SelectionMode="Single" IsReadOnly="true"
+              CanUserSortColumns="false"/>
+    <Button Click="button1_Click" Name="button1" Content="Neu" Height="23" Margin="0,12,12,0"
+            VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+    <Button Click="button2_Click" Name="button2" Content="Ändern" Height="23" Margin="0,41,12,0"
+            VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+    <Button Click="button3_Click" Name="button3" Content="Entfernen" Height="23" Margin="0,70,12,0"
+            VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+    <Button Click="button4_Click" Name="button4" Content="Im- / Export" Margin="0,0,12,12"
+            HorizontalAlignment="Right" Width="75" Height="23" VerticalAlignment="Bottom"/>
+  </Grid>
+</Window>

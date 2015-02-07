@@ -26,5 +26,12 @@ namespace SimplePOS.Util
             refTime.AddSeconds(timestamp);  // Timestamp aufaddieren
             return refTime;
         }
+
+        public static string getDateFromTimestampAsString(long timestamp, string format)
+        {
+            DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, 0).ToLocalTime();
+            DateTime date = epoch.AddSeconds(timestamp);
+            return String.Format(format, date);
+        }
     }
 }

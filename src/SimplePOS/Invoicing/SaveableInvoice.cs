@@ -72,12 +72,13 @@ namespace SimplePOS.Invoicing
             foreach (SaveableInvoiceItem item in items)
             {
                 sb.Append("\"").Append(number).Append("\"").Append(",");
-                sb.Append("\"").Append(date).Append("\"").Append(",");
+                sb.Append("\"").Append(Util.Timehelper.getDateFromTimestampAsString(date, "{0:yyyy-MM-dd}")).Append("\"").Append(",");
                 sb.Append("\"").AppendFormat("{0:0.00}", amount).Append("\"").Append(",");
                 sb.Append("\"").Append(currency).Append("\"").Append(",");
                 sb.Append(item.ToCsvLine());
                 sb.Append(Environment.NewLine);
             }
+            sb.Remove(sb.Length - 2, 2);
             return sb.ToString();
         }
         #endregion

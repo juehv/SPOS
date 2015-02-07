@@ -31,9 +31,17 @@ namespace SimplePOS.Printing
             listBox1.ItemsSource = invoice.getArticleList();
             listBox2.ItemsSource = invoice.getPriceList();
             textBlock2.Text = string.Format("{0:0.00}", invoice.getAmmount());
-            textBlock3.Text = string.Format("{0:0.00}", invoice.getTax1());
             textBlock5.Text = invoice.Date.ToString("dd.MM.yyy");
             textBlock6.Text = invoice.PageNumber;
+            if (invoice.ShowTax){
+                tax_field.Text = "enthaltene MwSt (" + invoice.TaxSet1 + "%):";
+                textBlock3.Text = string.Format("{0:0.00}", invoice.getTax1());
+            }
+            else
+            {
+                tax_field.Text = "";
+                textBlock3.Text = "Der Betrag enthält keine MwSt gem. §19 UStG";
+            }
         }
 
         public Grid getGrid()

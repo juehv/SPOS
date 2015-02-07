@@ -27,15 +27,14 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>http://juehv-tech.de/app/spos/update/</UpdateUrl>
     <TargetCulture>de-DE</TargetCulture>
     <ProductName>Simple POS</ProductName>
-    <PublisherName>JUehV - Tech</PublisherName>
+    <PublisherName>Jens Heuschkel</PublisherName>
     <MinimumRequiredVersion>0.2.0.0</MinimumRequiredVersion>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
     <DisallowUrlActivation>true</DisallowUrlActivation>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -78,7 +77,10 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Db4objects.Db4o, Version=8.0.236.16058, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
@@ -124,6 +126,9 @@
     <Compile Include="Invoicing\SaveableInvoiceItem.cs" />
     <Compile Include="Preferences\PreferenceManager.cs" />
     <Compile Include="Preferences\PreferenceParser.cs" />
+    <Compile Include="Preferences\TaxPreferences.xaml.cs">
+      <DependentUpon>TaxPreferences.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Printing\PrintingPreprocessor.cs" />
     <Compile Include="Stock\StockArticle.xaml.cs">
       <DependentUpon>StockArticle.xaml</DependentUpon>
@@ -174,6 +179,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Preferences\TaxPreferences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Printing\A4.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

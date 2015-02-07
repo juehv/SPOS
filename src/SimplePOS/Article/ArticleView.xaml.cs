@@ -25,7 +25,13 @@ namespace SimplePOS.Article
         {
             this.db = db;
             InitializeComponent();
+
+            tax1Item.Content = Preferences.PreferenceManager.TAX_1.ToString() + "%";
+            tax2Item.Content = Preferences.PreferenceManager.TAX_2.ToString() + "%";
+            comboBox1.IsEnabled = Preferences.PreferenceManager.SHOW_TAX;
+
             textBox1.Focus();
+
         }
 
         public ArticleView(ISposDb db, RegularArticle article)
@@ -73,11 +79,11 @@ namespace SimplePOS.Article
             }
             if (comboBox1.SelectedIndex == 0)
             {
-                tax = 19;
+                tax = Preferences.PreferenceManager.TAX_1;
             }
             else if (comboBox1.SelectedIndex == 1)
             {
-                tax = 7;
+                tax = Preferences.PreferenceManager.TAX_2;
             }
             string name = textBox2.Text;
             if (name == "")

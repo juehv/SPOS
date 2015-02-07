@@ -17,38 +17,42 @@ namespace SimplePOS.Invoicing
         private List<InvoiceItem> items;    // Artikel 
         private string pageNumber;   // Seitennummer
 
+        private double taxSet1;
+        private double taxSet2;
+        private bool showTax;
+
         #region Constructor
         // Full init
-        public Invoice(string currency, long number, DateTime date, List<InvoiceItem> items, string pageNumber)
+        public Invoice(string currency, long number, DateTime date, List<InvoiceItem> items, string pageNumber, double taxSet1, double taxSet2, bool showTax)
         {
             this.currency = currency;
             this.number = number;
             this.date = date;
             this.items = items;
             this.pageNumber = pageNumber;
+            this.taxSet1 = taxSet1;
+            this.taxSet2 = taxSet2;
+            this.showTax = showTax;
         }
 
         // Full without currency and page
-        public Invoice(long number, DateTime date, List<InvoiceItem> items) :
-            this(Preferences.PreferenceManager.CURRENCY_TECH, number, date, items, "") { }
+        public Invoice(long number, DateTime date, List<InvoiceItem> items, double taxSet1, double taxSet2, bool showTax) :
+            this(Preferences.PreferenceManager.CURRENCY_TECH, number, date, items, "", taxSet1, taxSet2,showTax) { }
 
         // Page follower
-        public Invoice(Invoice parent, int page, List<InvoiceItem> items)
-            : this(parent.Number, parent.Date, items)
+        public Invoice(Invoice parent, int page, List<InvoiceItem> items, double taxSet1, double taxSet2, bool showTax)
+            : this(parent.Number, parent.Date, items, taxSet1, taxSet2,showTax)
         {
             this.pageNumber = this.number + "-" + page;
         }
 
         // Zero Conf
-        public Invoice() : this(-1, DateTime.Now, new List<InvoiceItem>()) { }
+        public Invoice() : this(-1, DateTime.Now, new List<InvoiceItem>(), Preferences.PreferenceManager.TAX_1, Preferences.PreferenceManager.TAX_2, Preferences.PreferenceManager.SHOW_TAX) { }
 
         public Invoice Clone()
         {
-            return new Invoice(this.number, this.date, this.items);
+            return new Invoice(this.currency, this.number, this.date, this.items, this.pageNumber, this.taxSet1, this.taxSet2, this.showTax);
         }
-
-        //TODO REMOVE
-        public Invoice(long number) : this(number, DateTime.Now, null) { }
         #endregion
 
         #region Getter / Setter
@@ -78,6 +82,21 @@ namespace SimplePOS.Invoicing
         public long Number
         {
             get { return this.number; }
+        }
+
+        public double TaxSet1
+        {
+            get { return this.taxSet1; }
+        }
+
+        public double TaxSet2
+        {
+            get { return this.taxSet2; }
+        }
+
+        public bool ShowTax
+        {
+            get { return this.showTax; }
         }
         #endregion
 
@@ -208,7 +227,7 @@ namespace SimplePOS.Invoicing
         }
 
         /// <summary>
-        /// Calculates and returns the tax of article with tax 1 (19%)
+        /// Calculates and returns the tax of article with tax 1 (def 19%)
         /// </summary>
         /// <returns></returns>
         public double getTax1()
@@ -223,7 +242,7 @@ namespace SimplePOS.Invoicing
                     if (currentTax == Preferences.PreferenceManager.TAX_1)
                     {
                         //calc netto
-                        double netto = item.Article.Price / currentTax;
+                        double netto = item.Article.Price / (currentTax/100 +1);
                         double tmpTax = item.Article.Price - netto;
                         retval += item.Quantity * tmpTax;
                     }
@@ -234,7 +253,7 @@ namespace SimplePOS.Invoicing
         }
 
         /// <summary>
-        /// Calculates and returns the tax of article with tax 2 (7%)
+        /// Calculates and returns the tax of article with tax 2 (def 7%)
         /// </summary>
         /// <returns></returns>
         public double getTax2()
