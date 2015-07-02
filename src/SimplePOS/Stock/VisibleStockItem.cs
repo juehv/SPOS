@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using SimplePOS.Database;
 
-namespace SimplePOS.Stock
+namespace SimplePOS.Inventory
 {
     /// <summary>
     /// Containver for stock item which will be shown in gui. 

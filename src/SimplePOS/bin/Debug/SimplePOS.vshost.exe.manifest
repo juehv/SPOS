@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimplePOS.exe" size="82432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimplePOS.exe" size="94720">
       <assemblyIdentity name="SimplePOS" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kkVxt4QwKqHl8zfESZpXUJBN+lAiOM+Wb2ELrwwx5bo=</dsig:DigestValue>
+        <dsig:DigestValue>S6RVdfW69QMX4wIVjtD+Ixh0Ha8LMozymboH0l4avFY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -77,13 +77,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="SimplePOS.exe.config" size="144">
+  <file name="SimplePOS.exe.config" size="141">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jLCHdLm7v47ACsSCc72IOp8bA051ZvlIJCmYB91hk5o=</dsig:DigestValue>
+      <dsig:DigestValue>G0AfMBOrcH0cu4wps54zDHBfpELm2eswjCJK0Im1V0M=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

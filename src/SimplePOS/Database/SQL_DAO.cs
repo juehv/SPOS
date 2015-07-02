@@ -5,7 +5,7 @@ using System.Text;
 using System.Data.SQLite;
 using SimplePOS.Article;
 using SimplePOS.Invoicing;
-using SimplePOS.Stock;
+using SimplePOS.Inventory;
 
 namespace SimplePOS.Database
 {
@@ -78,7 +78,8 @@ namespace SimplePOS.Database
             command.CommandText = "CREATE TABLE IF NOT EXISTS stock ( " +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                 "item_id TEXT NOT NULL, " +
-                "item_quantity REAL NOT NULL);";
+                "item_quantity REAL NOT NULL, " +
+                "actual_stock REAL);";
             command.ExecuteNonQuery();
             // Einstellungen
             command.CommandText = "CREATE TABLE IF NOT EXISTS preferences ( " +
@@ -250,7 +251,9 @@ namespace SimplePOS.Database
             mutex.Release();
         }
 
-        public void AddItemToStock(SimplePOS.Stock.SaveableStockItem item)
+        
+
+        public void AddItemToStock(SimplePOS.Inventory.SaveableStockItem item)
         {
             mutex.WaitOne();
             connection.Open();
@@ -268,7 +271,7 @@ namespace SimplePOS.Database
             mutex.Release();
         }
 
-        public void SetItemToStock(SimplePOS.Stock.SaveableStockItem item)
+        public void SetItemToStock(SimplePOS.Inventory.SaveableStockItem item)
         {
             mutex.WaitOne();
             connection.Open();
@@ -276,9 +279,9 @@ namespace SimplePOS.Database
             using (SQLiteCommand command = new SQLiteCommand(connection))
             {
                 //TODO if exist alter
-                command.CommandText = "INSERT INTO stock (item_id, item_quantity) VALUES (?,?);";
+                command.CommandText = "UPDATE stock SET item_quantity = " + item.Quantity + " WHERE item_id LIKE ?;";
                 command.Parameters.Add(new SQLiteParameter("item_id", item.Number));
-                command.Parameters.Add(new SQLiteParameter("item_quantity", item.Quantity));
+                //command.Parameters.Add(new SQLiteParameter("item_quantity", item.Quantity));
                 command.ExecuteNonQuery();
             }
 
@@ -293,20 +296,27 @@ namespace SimplePOS.Database
         /// <param name="quantity"></param>
         public void TakeOutOfStock(string number, double quantity)
         {
-            mutex.WaitOne();
-            mutex.Release();
+            double stock_quantity = 0;
+            double new_stock_quantity = 0;
+            
+            stock_quantity = GetStockItemQuantity(number);
+
+            new_stock_quantity = stock_quantity - quantity;
+
+            ChangeStock(number, new_stock_quantity);
+            
         }
 
-        public List<SimplePOS.Stock.SaveableStockItem> GetStock()
+        public List<SimplePOS.Inventory.SaveableStockItem> GetStock()
         {
             mutex.WaitOne();
-            List<SimplePOS.Stock.SaveableStockItem> items = new List<SaveableStockItem>();
+            List<SimplePOS.Inventory.SaveableStockItem> items = new List<SaveableStockItem>();
             connection.Open();
 
             using (SQLiteCommand command = new SQLiteCommand(connection))
             {
                 //request new number
-                command.CommandText = "SELECT item_id item_quantity FROM stock ORDER BY item_id ASC;";
+                command.CommandText = "SELECT item_id, item_quantity FROM stock ORDER BY item_id ASC;";
                 SQLiteDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -397,7 +407,7 @@ namespace SimplePOS.Database
             connection.Close();
             mutex.Release();
             return number;
-        }
+         }
 
         public List<SimplePOS.Invoicing.SaveableInvoice> GetAllInvoices()
         {
@@ -574,5 +584,109 @@ namespace SimplePOS.Database
             connection.Close();
             mutex.Release();
         }
+
+        public void ChangeStock(string number, double quantity)
+        {
+            mutex.WaitOne();
+            connection.Open();
+            using (SQLiteCommand command = new SQLiteCommand(connection))
+            {
+                command.CommandText = "UPDATE stock SET item_quantity = " + quantity + " WHERE item_id LIKE ?;";
+                command.Parameters.Add(new SQLiteParameter("item_id", number));
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
+            mutex.Release();
+        }
+
+        public double GetStockItemQuantity(string number)
+        {
+            double stock_quantity = 0;
+            connection.Open();
+
+            using (SQLiteCommand command = new SQLiteCommand(connection))
+            {
+                
+                
+                //request new number
+                command.CommandText = "SELECT item_quantity FROM stock WHERE item_id LIKE ?;";
+                command.Parameters.Add(new SQLiteParameter("item_id", number));
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    stock_quantity = (double)reader[0];
+                }
+                reader.Close();
+            }
+
+            connection.Close();
+            return stock_quantity;
+
+        }
+
+        public int ChangeIventory(string number, double quantity)
+        {
+            int result = 0;
+            mutex.WaitOne();
+            connection.Open();
+
+            try
+            {
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "UPDATE stock SET actual_stock = " + quantity + " WHERE item_id LIKE ?;";
+                    command.Parameters.Add(new SQLiteParameter("item_id", number));
+                    command.ExecuteNonQuery();
+                }
+                 result = 0;
+            }
+            catch (Exception)
+            {
+                result = 8;
+                throw;
+            }
+            connection.Close();
+            mutex.Release();
+            return result;
+        }
+
+        public List<SimplePOS.InventoryItem.InventoryItem> GetInventory()
+        {
+
+            List<SimplePOS.InventoryItem.InventoryItem> InventoryList = new List<SimplePOS.InventoryItem.InventoryItem>();
+
+            connection.Open();
+            using (SQLiteCommand command = new SQLiteCommand(connection))
+            {
+                command.CommandText = "SELECT a.item_name, a.item_id, s.item_quantity, s.actual_stock "
+                + "FROM article AS a INNER JOIN stock AS s ON a.item_id = s.item_id AND s.actual_stock IS NOT NULL;";
+                SQLiteDataReader Reader = command.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    InventoryList.Add(new SimplePOS.InventoryItem.InventoryItem(Reader[0].ToString(), Reader[1].ToString(), (double)Reader[2], (double)Reader[3]));
+                }
+            }
+            connection.Close();
+           return InventoryList; 
+
+        }
+        public void ClearIventory(string number)
+        {
+            
+            mutex.WaitOne();
+            connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "UPDATE stock SET actual_stock = NULL WHERE item_id LIKE ?;";
+                    command.Parameters.Add(new SQLiteParameter("item_id", number));
+                    command.ExecuteNonQuery();
+                }           
+            connection.Close();
+            mutex.Release();
+            
+        } 
     }
 }

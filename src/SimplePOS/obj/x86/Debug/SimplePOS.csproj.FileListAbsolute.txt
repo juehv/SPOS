@@ -99,3 +99,77 @@ C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\SimplePOS.exe.manifes
 C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\SimplePOS.application
 C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\SimplePOS.exe
 C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\SimplePOS.pdb
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.exe.config
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.exe
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.pdb
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.exe.manifest
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.application
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.exe
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.pdb
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\Db4objects.Db4o.dll
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\System.Data.SQLite.dll
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.csprojResolveAssemblyReference.cache
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleView.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleManager.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\DiscountInputBox.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\MainWindow.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Preferences\TaxPreferences.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Printing\A4.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockArticle.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockList.baml
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleView.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleManager.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\DiscountInputBox.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Preferences\TaxPreferences.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Printing\A4.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockArticle.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockList.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\App.g.cs
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS_MarkupCompile.cache
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.g.resources
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.Properties.Resources.resources
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.csproj.GenerateResource.Cache
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.exe.manifest
+C:\Users\Grcic\Downloads\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.application
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.exe.config
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.exe
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.pdb
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.exe.manifest
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.application
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.exe
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\SimplePOS.pdb
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\Db4objects.Db4o.dll
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\bin\Debug\System.Data.SQLite.dll
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.csprojResolveAssemblyReference.cache
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleView.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleManager.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\DiscountInputBox.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\MainWindow.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Preferences\TaxPreferences.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Printing\A4.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockArticle.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockList.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleView.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\ArticleManager.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Article\DiscountInputBox.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Invoicing\ReturnCalculator.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Preferences\TaxPreferences.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Printing\A4.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockArticle.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Stock\StockList.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\App.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS_MarkupCompile.cache
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.g.resources
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.Properties.Resources.resources
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.csproj.GenerateResource.Cache
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.exe.manifest
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\SimplePOS.application
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryItem.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryItem.g.cs
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryOverview.baml
+C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryOverview.g.cs

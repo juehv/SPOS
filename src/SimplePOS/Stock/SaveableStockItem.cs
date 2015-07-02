@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SimplePOS.Stock
+namespace SimplePOS.Inventory
 {
     /// <summary>
     /// Container for stock item. Contains primitives only.

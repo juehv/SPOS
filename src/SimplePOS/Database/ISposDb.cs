@@ -56,14 +56,14 @@ namespace SimplePOS.Database
         /// Adds one item to stock. If this item already exists the quantity will be add up.
         /// </summary>
         /// <param name="item"></param>
-        void AddItemToStock(SimplePOS.Stock.SaveableStockItem item);
+        void AddItemToStock(SimplePOS.Inventory.SaveableStockItem item);
 
         /// <summary>
         /// Adds one item to stock. If this item already exists the old one
         /// will be replaced.
         /// </summary>
         /// <param name="item"></param>
-        void SetItemToStock(SimplePOS.Stock.SaveableStockItem item);
+        void SetItemToStock(SimplePOS.Inventory.SaveableStockItem item);
 
         /// <summary>
         /// Takes the number of quantity articles out of stock.
@@ -76,7 +76,7 @@ namespace SimplePOS.Database
         /// Requests the whole stock.
         /// </summary>
         /// <returns></returns>
-        List<SimplePOS.Stock.SaveableStockItem> GetStock();
+        List<SimplePOS.Inventory.SaveableStockItem> GetStock();
 
         /// <summary>
         /// Saves the invoice to the database and returns the invoice number.
@@ -102,5 +102,15 @@ namespace SimplePOS.Database
         /// </summary>
         /// <returns></returns>
         void LoadPreferences();
+
+        void ChangeStock(string number, double quantity);
+
+        double GetStockItemQuantity(string number);
+
+        int ChangeIventory(string number, double quantity);
+
+        List<SimplePOS.InventoryItem.InventoryItem> GetInventory();
+
+        void ClearIventory(string number);
     }
 }

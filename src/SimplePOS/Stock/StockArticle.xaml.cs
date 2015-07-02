@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using SimplePOS.Database;
 
-namespace SimplePOS.Stock
+namespace SimplePOS.Inventory
 {
     /// <summary>
     /// Interaktionslogik für StoreArticle.xaml
@@ -21,6 +21,9 @@ namespace SimplePOS.Stock
     {
         private bool singleShow = false;
         private ISposDb db;
+        private double curr_quantity;
+        public bool stop_stocking = true;
+        
 
         public StockArticle(ISposDb db)
         {
@@ -34,7 +37,7 @@ namespace SimplePOS.Stock
         {
             textBox1.Text = item.Number;
             textBox2.Text = item.Quantity.ToString();
-
+            curr_quantity = item.Quantity;
             button2.Visibility = Visibility.Hidden;
             singleShow = true;
             textBox1.IsEnabled=false;
@@ -65,6 +68,7 @@ namespace SimplePOS.Stock
                 {
                     return;
                 }
+                
             }
 
 
@@ -78,12 +82,15 @@ namespace SimplePOS.Stock
             SaveableStockItem item = new SaveableStockItem(number, quantity);
             if (singleShow)
             {
+                curr_quantity += item.Quantity;
+                item.Quantity = curr_quantity;
                 db.SetItemToStock(item);
             }
             else
             {
                 db.AddItemToStock(item);
             }
+            stop_stocking = false;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -97,6 +104,8 @@ namespace SimplePOS.Stock
             {
                 clearForm();
             }
+
+            stop_stocking = false;
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
@@ -113,6 +122,7 @@ namespace SimplePOS.Stock
                     clearForm();
                 }
             }
+            stop_stocking = false;
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -127,5 +137,28 @@ namespace SimplePOS.Stock
                 textBox2.Focus();
             }
         }
+
+        private void Grid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                stop_stocking = true;
+                this.Close();
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           
+        }
+
+        private void Window_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           
+        }
+
+
+
+
     }
 }

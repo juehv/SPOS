@@ -11,17 +11,22 @@ namespace SimplePOS.Invoicing
     public class Invoice
     {
         //TODO use preference currency
-        private string currency; // Währung
-        private long number;    // Rechnungsnummer
-        private DateTime date;  // Rechnungsdatum
-        private List<InvoiceItem> items;    // Artikel 
-        private string pageNumber;   // Seitennummer
-
-        private double taxSet1;
-        private double taxSet2;
-        private bool showTax;
+        [NonSerialized] public string currency; // Währung
+        [NonSerialized] public long number;    // Rechnungsnummer
+        [NonSerialized] public DateTime date;  // Rechnungsdatum
+        [NonSerialized] public List<InvoiceItem> items;    // Artikel 
+        [NonSerialized] public string pageNumber;   // Seitennummer
+        [NonSerialized] public double taxSet1;
+        [NonSerialized] public double taxSet2;
+        [NonSerialized] public bool showTax;
 
         #region Constructor
+        
+
+        // Zero Conf
+        public Invoice() { }
+
+
         // Full init
         public Invoice(string currency, long number, DateTime date, List<InvoiceItem> items, string pageNumber, double taxSet1, double taxSet2, bool showTax)
         {
@@ -45,9 +50,6 @@ namespace SimplePOS.Invoicing
         {
             this.pageNumber = this.number + "-" + page;
         }
-
-        // Zero Conf
-        public Invoice() : this(-1, DateTime.Now, new List<InvoiceItem>(), Preferences.PreferenceManager.TAX_1, Preferences.PreferenceManager.TAX_2, Preferences.PreferenceManager.SHOW_TAX) { }
 
         public Invoice Clone()
         {
@@ -78,6 +80,7 @@ namespace SimplePOS.Invoicing
         {
             get { return this.items; }
         }
+
 
         public long Number
         {

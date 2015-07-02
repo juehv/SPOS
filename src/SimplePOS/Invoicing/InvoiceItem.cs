@@ -10,8 +10,8 @@ namespace SimplePOS.Invoicing
     /// </summary>
     public class InvoiceItem
     {
-        private SimplePOS.Article.AbstractArticle article;
-        private double quantity;
+        public SimplePOS.Article.AbstractArticle article;
+        public double quantity;
 
         public InvoiceItem(SimplePOS.Article.AbstractArticle article, double quantity)
         {

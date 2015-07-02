@@ -8,7 +8,7 @@ namespace SimplePOS.Article
     /// <summary>
     /// Container for articles. Can be implemented in diffrent ways like normal article or discount.
     /// </summary>
-    public abstract class AbstractArticle
+    public class AbstractArticle
     {
         // implementierte Artikeltypen
         public enum ArticleType
@@ -17,10 +17,10 @@ namespace SimplePOS.Article
         }
 
         protected ArticleType type;
-        protected string number;  //Artikelnummer
-        protected string name;    //Artikel-Kurzname (für Kassenbon)
-        protected double price;   //Preis
-        protected double tax; // Steuer
+        public string number;  //Artikelnummer
+        public string name;    //Artikel-Kurzname (für Kassenbon)
+        public double price;   //Preis
+        public double tax; // Steuer
 
         public AbstractArticle(ArticleType type, string number, string name, double price)
         {

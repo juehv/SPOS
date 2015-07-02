@@ -6,7 +6,7 @@ using Db4objects.Db4o;
 using Db4objects.Db4o.Query;
 using SimplePOS.Article;
 using SimplePOS.Invoicing;
-using SimplePOS.Stock;
+using SimplePOS.Inventory;
 
 
 namespace SimplePOS.Database
@@ -139,7 +139,7 @@ namespace SimplePOS.Database
             return retval;
         }
 
-        private SimplePOS.Stock.SaveableStockItem getStockItemByNumberCore(string number, IObjectContainer db)
+        private SimplePOS.Inventory.SaveableStockItem getStockItemByNumberCore(string number, IObjectContainer db)
         {
             SaveableStockItem query = new SaveableStockItem(number, 0);
             IObjectSet result = db.QueryByExample(query);
@@ -373,5 +373,27 @@ namespace SimplePOS.Database
         public void SavePreferences()
         {
         }
+
+        public void ChangeStock(string number, double quantity)
+        { 
+        
+        }
+
+        public double GetStockItemQuantity(string number)
+        {
+            return 0;
+        }
+
+        public int ChangeIventory(string number, double quantity)
+        {
+            return 0;
+        }
+
+        public List<SimplePOS.InventoryItem.InventoryItem> GetInventory()
+        {
+            return null;
+        }
+
+        public void ClearIventory(string number) { }
     }
 }

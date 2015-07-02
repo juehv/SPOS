@@ -37,32 +37,42 @@ namespace SimplePOS.Printing
         /// <returns></returns>
         public bool print(SimplePOS.Invoicing.Invoice items)
         {
-            foreach (SimplePOS.Invoicing.InvoiceItem item in items.Items)
-            {
-                Console.WriteLine(item.Article.Name + " x" + item.Quantity);
-            }
+
+            SimplePOS.Invoicing.SerializableInvoice serialinvoice = new Invoicing.SerializableInvoice(items);
+
+            SimplePOS.Invoicing.XMLInvoiceGenerator InvoiceXMLGenerator = new SimplePOS.Invoicing.XMLInvoiceGenerator(serialinvoice);
+            InvoiceXMLGenerator.PrintXMLInvoice();
+            return true;
+
+            //foreach (SimplePOS.Invoicing.InvoiceItem item in items.Items)
+            //{
+            //    Console.WriteLine(item.Article.Name + " x" + item.Quantity);
+            //}
 
 
-            PrintDialog pd = new PrintDialog();
-            if (pd.ShowDialog() == true)
-            {
-                List<SimplePOS.Invoicing.Invoice> pages = PrintingPreprocessor.ProcessInvoices(items);
-                foreach (SimplePOS.Invoicing.Invoice item in pages)
-                {
-                    A4 page = new A4(item);
-                    page.Measure(new System.Windows.Size(pd.PrintableAreaWidth, pd.PrintableAreaHeight));
-                    page.Arrange(new System.Windows.Rect(new System.Windows.Point(0, 0), page.DesiredSize));
-                    pd.PrintVisual(page.getGrid(), item.PageNumber);
+            //PrintDialog pd = new PrintDialog();
 
-                    if (PreferenceManager.DOUBLEPRINT)
-                    {
-                        pd.PrintVisual(page.getGrid(), item.PageNumber);
-                    }
-                }
+            
 
-                return true;
-            }
-            return false;
+            //if (pd.ShowDialog() == true)
+            //{
+            //    List<SimplePOS.Invoicing.Invoice> pages = PrintingPreprocessor.ProcessInvoices(items);
+            //    foreach (SimplePOS.Invoicing.Invoice item in pages)
+            //    {
+            //        A4 page = new A4(item);
+            //        page.Measure(new System.Windows.Size(pd.PrintableAreaWidth, pd.PrintableAreaHeight));
+            //        page.Arrange(new System.Windows.Rect(new System.Windows.Point(0, 0), page.DesiredSize));
+            //        pd.PrintVisual(page.getGrid(), item.PageNumber);
+
+            //        if (PreferenceManager.DOUBLEPRINT)
+            //        {
+            //           pd.PrintVisual(page.getGrid(), item.PageNumber);
+            //        }
+            //    }
+
+            //return true;
+            //}
+            //return false;
         }
 
     }

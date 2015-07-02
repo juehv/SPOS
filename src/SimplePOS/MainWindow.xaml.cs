@@ -17,7 +17,7 @@ using Microsoft.Win32;
 using System.Net;
 using SimplePOS.Article;
 using SimplePOS.Invoicing;
-using SimplePOS.Stock;
+using SimplePOS.Inventory;
 using SimplePOS.Preferences;
 
 namespace SimplePOS
@@ -28,19 +28,21 @@ namespace SimplePOS
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Invoice invoice = new Invoice();
+             
+        private Invoice invoice = new Invoice(-1, DateTime.Now, new List<InvoiceItem>(), Preferences.PreferenceManager.TAX_1, Preferences.PreferenceManager.TAX_2, Preferences.PreferenceManager.SHOW_TAX);
+
         private ISposDb db = SQL_DAO.getInstance();
 
         #region Actions
         private void clearForm()
         {
-            invoice = new Invoice();
+            invoice = new Invoice(-1, DateTime.Now, new List<InvoiceItem>(), Preferences.PreferenceManager.TAX_1, Preferences.PreferenceManager.TAX_2, Preferences.PreferenceManager.SHOW_TAX);
             textBox1.Text = "";
             textBox2.Text = string.Format("{0:0.00}", invoice.getAmmount());
             listBox1.ItemsSource = invoice.Items;
             textBox1.Focus();
             datePicker1.SelectedDate = DateTime.Now;
-            doubleprintMenuItem.IsChecked = Preferences.PreferenceManager.DOUBLEPRINT;
+            //doubleprintMenuItem.IsChecked = Preferences.PreferenceManager.DOUBLEPRINT;
         }
 
         private void stornoAction()
@@ -79,6 +81,7 @@ namespace SimplePOS
         private void printInvoiceAction()
         {
             invoice.saveToDb(db);
+
             if (InvoicePrinter.getInstance().print(invoice))
             {
                 foreach (InvoiceItem item in invoice.Items)
@@ -163,12 +166,16 @@ namespace SimplePOS
         // Lager - Verwalten
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Momentan nicht untertützt", "", MessageBoxButton.OK, MessageBoxImage.Warning);
-            return;
+            //MessageBox.Show("Momentan nicht untertützt", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //return;
 
-            //StockList window = new StockList(db);
-            //window.Owner = this;
-            //window.ShowDialog();
+            StockList window = new StockList(db);
+            window.Owner = this;
+            window.dataGrid1.BeginInit();
+            window.dataGrid1.EndInit();
+            window.ShowDialog();
+            
+            
         }
 
         // Drucken Button
@@ -222,15 +229,16 @@ namespace SimplePOS
         // Extras - Inventurmodus
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Momentan nicht untertützt", "", MessageBoxButton.OK, MessageBoxImage.Warning);
+            SimplePOS.Inventory.InventoryItem window = new SimplePOS.Inventory.InventoryItem(db);
+            window.ShowDialog();
         }
 
         // Rechnung - Beleg 2x drucken
-        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
-        {
-            Preferences.PreferenceManager.DOUBLEPRINT = doubleprintMenuItem.IsChecked;
-            db.SavePreferences();
-        }
+        //private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        //{
+        //    Preferences.PreferenceManager.DOUBLEPRINT = doubleprintMenuItem.IsChecked;
+        //    db.SavePreferences();
+        //}
 
         // Rechnung - Neu
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
@@ -327,6 +335,12 @@ namespace SimplePOS
         {
             TaxPreferences window = new TaxPreferences(db);
             window.Owner = this;
+            window.ShowDialog();
+        }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            InventoryOverview window = new InventoryOverview(db);
             window.ShowDialog();
         }
     }

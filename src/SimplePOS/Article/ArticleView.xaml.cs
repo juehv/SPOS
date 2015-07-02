@@ -92,8 +92,10 @@ namespace SimplePOS.Article
             }
             RegularArticle article = new RegularArticle
                 (textBox1.Text, name, textBox4.Text, price, tax);
+            
             // save to database
             db.SaveArticle(article);
+            db.AddItemToStock(new SimplePOS.Inventory.SaveableStockItem(article.number, 0));
 
             this.Close();
         }
