@@ -173,3 +173,7 @@ C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src
 C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryItem.g.cs
 C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryOverview.baml
 C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\Inventory\InventoryOverview.g.cs
+C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\Inventory\InventoryItem.baml
+C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\Inventory\InventoryOverview.baml
+C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\Inventory\InventoryItem.g.cs
+C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\Inventory\InventoryOverview.g.cs

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\obj\x86\Debug\
+C:\Users\mswin_000\github\SPOS\src\SimplePOS\obj\x86\Debug\
 SimplePOS
 none
 false
 DEBUG;TRACE
-C:\Users\Grcic\Documents\Visual Studio 2013\Projects\SPOS-master\SPOS-master\src\SimplePOS\App.xaml
+C:\Users\mswin_000\github\SPOS\src\SimplePOS\App.xaml
 11-2119257312
 
 41-1977027500
-16-1892688180
+16-519606165
 Article\ArticleView.xaml;Article\ArticleManager.xaml;Article\DiscountInputBox.xaml;Inventory\InventoryItem.xaml;Inventory\InventoryOverview.xaml;Invoicing\ReturnCalculator.xaml;MainWindow.xaml;Preferences\TaxPreferences.xaml;Printing\A4.xaml;Stock\StockArticle.xaml;Stock\StockList.xaml;
 
 False
