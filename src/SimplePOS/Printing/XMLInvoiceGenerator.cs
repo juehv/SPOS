@@ -1,27 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Xsl;
 using System.Windows.Forms;
 using System.Xml;
-using System.Xml.XPath;
+using System.Xml.Xsl;
+using SimplePOS.Invoicing;
 
-namespace SimplePOS.Invoicing
+namespace SimplePOS.Printing
 {
-    public class XMLInvoiceGenerator
+    public class XmlInvoiceGenerator
     {
-        private string pathXML = System.Windows.Forms.Application.StartupPath + "/InvoiceDocs/Invoice.xml";
+        private string _pathXml = System.Windows.Forms.Application.StartupPath + "/InvoiceDocs/Invoice.xml";
 
-        private string pathXSL = System.Windows.Forms.Application.StartupPath + "/InvoiceDocs/LayoutXSL.xsl";
+        private string _pathXsl = System.Windows.Forms.Application.StartupPath + "/InvoiceDocs/LayoutXSL.xsl";
 
-        private string pathResult = System.Windows.Forms.Application.StartupPath + "/InvoiceDocs/InvoiceResult.html";
+        private string _pathResult = System.Windows.Forms.Application.StartupPath + "/InvoiceDocs/InvoiceResult.html";
 
-        public XMLInvoiceGenerator(SimplePOS.Invoicing.SerializableInvoice serialinvoice)
+        public XmlInvoiceGenerator(SimplePOS.Invoicing.SerializableInvoice serialinvoice)
         {
 
-            XmlWriter w = XmlWriter.Create(pathXML);
+            XmlWriter w = XmlWriter.Create(_pathXml);
 
             w.WriteProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"LayoutXSL.xsl\"");
 
@@ -31,18 +27,18 @@ namespace SimplePOS.Invoicing
 
             XslCompiledTransform myXslTrans = new XslCompiledTransform();
 
-            myXslTrans.Load(pathXSL);
+            myXslTrans.Load(_pathXsl);
 
-            myXslTrans.Transform(pathXML, pathResult);
+            myXslTrans.Transform(_pathXml, _pathResult);
 
         }
 
-        public void PrintXMLInvoice()
+        public void PrintXmlInvoice()
         {
 
             System.Windows.Forms.WebBrowser webBrowserForPrinting = new System.Windows.Forms.WebBrowser();
 
-            webBrowserForPrinting.Url = new Uri(pathResult);
+            webBrowserForPrinting.Url = new Uri(_pathResult);
 
             webBrowserForPrinting.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(PrintDocument);
 

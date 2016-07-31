@@ -129,7 +129,6 @@
       <DependentUpon>InventoryOverview.xaml</DependentUpon>
     </Compile>
     <Compile Include="Invoicing\InvoiceItemSimple.cs" />
-    <Compile Include="Invoicing\InvoiceXMLGenerator.cs" />
     <Compile Include="Invoicing\ReturnCalculator.xaml.cs">
       <DependentUpon>ReturnCalculator.xaml</DependentUpon>
     </Compile>
@@ -141,6 +140,7 @@
     <Compile Include="Preferences\TaxPreferences.xaml.cs">
       <DependentUpon>TaxPreferences.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Printing\XmlInvoiceGenerator.cs" />
     <Compile Include="Printing\PrintingPreprocessor.cs" />
     <Compile Include="Stock\StockArticle.xaml.cs">
       <DependentUpon>StockArticle.xaml</DependentUpon>

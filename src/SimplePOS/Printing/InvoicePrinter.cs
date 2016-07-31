@@ -40,8 +40,8 @@ namespace SimplePOS.Printing
 
             SimplePOS.Invoicing.SerializableInvoice serialinvoice = new Invoicing.SerializableInvoice(items);
 
-            SimplePOS.Invoicing.XMLInvoiceGenerator InvoiceXMLGenerator = new SimplePOS.Invoicing.XMLInvoiceGenerator(serialinvoice);
-            InvoiceXMLGenerator.PrintXMLInvoice();
+            XmlInvoiceGenerator InvoiceXMLGenerator = new XmlInvoiceGenerator(serialinvoice);
+            InvoiceXMLGenerator.PrintXmlInvoice();
             return true;
 
             //foreach (SimplePOS.Invoicing.InvoiceItem item in items.Items)

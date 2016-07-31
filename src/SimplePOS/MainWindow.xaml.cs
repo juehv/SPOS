@@ -50,6 +50,8 @@ namespace SimplePOS
             int selectedIndex = listBox1.SelectedIndex;
             if (selectedIndex < 0)
             {
+                MessageBox.Show("Bitte wählen Sie eine Artikel aus.",
+                "Storno.", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             InvoiceItem item = invoice.Items[selectedIndex];
@@ -275,7 +277,7 @@ namespace SimplePOS
         private void MenuItem_Click_12(object sender, RoutedEventArgs e)
         {
             WebClient webClient = new WebClient();
-            string versionString = webClient.DownloadString("http://www.juehv-tech.de/app/spos/update/version.txt");
+            string versionString = webClient.DownloadString("http://www.jensheuschkel-it.de/app/spos/version.txt");
             if (versionString.Length >= 7)
             {
                 string[] version = versionString.Split(new char[] { '.' });
